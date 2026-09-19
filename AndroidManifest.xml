@@ -42,6 +42,10 @@
             android:resizeableActivity="true"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -52,10 +56,6 @@
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
             android:taskAffinity=""
             android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.SET_WALLPAPER" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.service.wallpaper.CROP_AND_SET_WALLPAPER" />
                 <category android:name="android.intent.category.DEFAULT" />
