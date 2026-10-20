@@ -48,6 +48,22 @@
             </intent-filter>
         </activity>
 
+        <!-- Rime lock screen gallery, editor and calibration. SystemUI starts it after unlock. -->
+        <activity
+            android:name=".ui.rime.RimeCustomizationActivity"
+            android:exported="true"
+            android:permission="android.permission.WRITE_SECURE_SETTINGS"
+            android:excludeFromRecents="true"
+            android:taskAffinity=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden|uiMode|assetsPaths"
+            android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar">
+            <intent-filter>
+                <action android:name="dev.rime.action.CALIBRATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".ui.WallpaperSetActivity"
             android:exported="true"

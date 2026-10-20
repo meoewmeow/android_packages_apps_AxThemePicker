@@ -56,6 +56,8 @@ android_app {
         "hilt_android",
         "ThemePickerLib",
         "SystemUICustomizationLib",
+        // The shared Rime presentation: the same sources the preview APK and SystemUI compile.
+        "RimeSharedUI",
         "androidx.graphics_graphics-shapes",
     ],
 
